@@ -48,3 +48,12 @@ std::ostream& operator<<(std::ostream &cout, const Fixed& fixed){
 	cout << fixed.toFloat();
 	return cout;
 }
+
+
+//comparison
+
+bool Fixed::operator>(const Fixed& fixed) const
+{
+	const Fixed& fix = (const Fixed&)*this;
+	return (fix.getRawBits() > fixed.getRawBits());
+}
