@@ -57,3 +57,34 @@ bool Fixed::operator>(const Fixed& fixed) const
 	const Fixed& fix = (const Fixed&)*this;
 	return (fix.getRawBits() > fixed.getRawBits());
 }
+
+bool Fixed::operator>=(const Fixed& fixed) const{
+	return (this->getRawBits() >= fixed.getRawBits());
+}
+
+bool Fixed::operator<(const Fixed& fixed) const{
+	return (this->getRawBits() < fixed.getRawBits());
+}
+
+bool Fixed::operator<=(const Fixed& fixed) const{
+	return (this->getRawBits() <= fixed.getRawBits());
+}
+
+bool Fixed::operator==(const Fixed& fixed) const{
+	return (this->getRawBits() == fixed.getRawBits());
+}
+
+
+bool Fixed::operator!=(const Fixed& fixed) const{
+	return (this->getRawBits() != fixed.getRawBits());
+}
+
+//increment
+
+Fixed Fixed::operator++(int){
+	Fixed tmp = *this;
+	this->fixedPoint++;
+	return (tmp);
+}
+
+

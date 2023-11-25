@@ -2,10 +2,11 @@
 
 int main()
 {
-	Fixed a (5);
-Fixed const b( 10 );
+	Fixed a;
+Fixed const b( 5.2f );
 
 
-std::cout << (b > a) << std::endl;
+std::cout << a++ << std::endl;
+std::cout << a++ << std::endl;
 }
 
