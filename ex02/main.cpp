@@ -2,11 +2,12 @@
 
 int main()
 {
-	Fixed a;
-Fixed const b( 5.2f );
+	Fixed a(10);
+	Fixed  const b( 5.2f );
+	Fixed f(2);
 
+	;
 
-std::cout << a++ << std::endl;
-std::cout << a++ << std::endl;
+	operator<<(std::cout, (Fixed::max(a , b))) <<std::endl;
+	operator<<(std::cout, f) <<std::endl;
 }
-
